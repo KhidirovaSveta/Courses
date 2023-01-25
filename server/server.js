@@ -36,6 +36,28 @@ app.get('/', (req, res) => {
     })
 })
 
+app.get('/:id', (req, res) => {
+    const {id} = req.params
+    Courses.findById(id, (error, doc) => {
+        if(!error){
+            res.send(doc)
+        }else{
+            res.status(500).json({message: error})
+        }
+    })
+})
+
+app.delete('/:id', (req, res) => {
+    const {id} = req.params
+    Courses.findByIdAndDelete(id, (error) => {
+        if(!error){
+            res.send("succsess")
+        }else{
+            res.status(404).json({message: error})
+        }
+    })
+})
+
 app.post("/", (req, res) => {
     let newCourse = new Courses ({
         img1: req.body.img1,

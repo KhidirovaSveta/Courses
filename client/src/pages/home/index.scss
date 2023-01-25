@@ -77,4 +77,71 @@
             }
         }
     }
+
+    .container{
+        .services{
+            margin-bottom: 100px;
+            .serviceHeader{
+                text-align: center;
+                margin: 40px 0;
+            }
+            .service-cards{
+                display: flex;
+              flex-wrap: wrap;
+              column-gap: 55px;
+              row-gap: 45px;
+              .service-card{
+                width: 30%;
+                .service-parag{
+                    margin-top: 15px;
+                    line-height: 33px;
+                    color: rgb(134, 134, 134);
+                }
+            }
+        }
+    }
+
+      .upcomingEvents{
+        margin-bottom: 100px;
+        .upcomingEventsTitle{
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 60px;
+        }
+          .calendar{
+            display: flex;
+            row-gap: 30px;
+            flex-wrap: wrap;
+            
+            .d-flex{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                column-gap: 65px;
+                .data{
+                    text-align: center;
+                    border: 2px solid #FFB606;
+                    padding: 31px 35px;
+                    .num{
+                        font-size: 30px;
+                    }
+                    .datadata{
+                        color: #FFB606;
+                        font-weight: 700;
+                    }
+                }
+               a{
+                color: #000;
+                text-decoration: none;
+               }
+                .eventDescription{
+                    width: 100%;
+                    margin-top: 10px;
+                    line-height: 33px;
+                    color: rgb(134, 134, 134);
+                }
+            }
+          }
+      }
+    }
 }

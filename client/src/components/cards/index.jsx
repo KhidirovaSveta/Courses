@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios';
 import "./index.scss"
+import { Link } from 'react-router-dom';
 const Cards = () => {
     const [courses, setCourses] = useState([])
     const [toggle, setToggle] = useState(true)
@@ -17,20 +18,16 @@ const Cards = () => {
         })
     }
 
-    const handleSort = () => {
-      let sort = courses.sort((a, b) => a.price > b.price ? 1:-1 )
-      setCourses([...sort])
-    }
     
-    // const handleSortByPrice = (obj) => {
-    //   setToggle(!toggle)
-    //   if(toggle){
-    //     let sortByprice = obj.sort((a, b) => a.price - b.price ? 1:-1 )
-    //     setToggle([...sortByprice])
-    //   }else{
-    //     axios.get(`http://localhost:8080/`).then((data) => setCourses(data.data))
-    //   }
-    // }
+    const handleSortByPrice = () => {
+      setToggle(!toggle)
+      if(toggle){
+        let sortByprice = courses.sort((a, b) => a.price > b.price ? 1:-1 )
+        setCourses([...sortByprice])
+      }else{
+        axios.get(`http://localhost:8080/`).then((data) => setCourses(data.data))
+      }
+    }
     
   return (
     <div id='Cards'>
@@ -38,15 +35,17 @@ const Cards = () => {
         <div className="conatiner">
             <div className="functions">
                 <input type="text"  onChange={(e) => handleSearch(e.target.value)} className="search" placeholder='Search here...'/>
-                <button onClick={() => handleSort()}> Sort </button>
+                <button onClick={() => handleSortByPrice()} className="sortBtn"> Sort </button>
             </div>
             <div className="allCards">
           {courses.map((cours) => {
             return(
                 <div className="card">
                 <img src={cours.img1}alt=""  className='cardsImg'/>
-                <h2>{cours.title}</h2>
+                <Link to={`/${cours._id}`}>
+                <h2 className='cardTitle'>{cours.title}</h2>
                 <span>{cours.tags}</span>
+                </Link>
 
                 <div className="author">
                     <img src={cours.img2} alt="" className='subimg'/>

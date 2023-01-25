@@ -1,0 +1,24 @@
+#Details{
+    padding-top: 290px;
+    margin-bottom: 50px;
+   .details{
+       display: flex;
+       justify-content: center;
+       column-gap: 20px;
+       align-items: center;
+    .details-info{
+         .deleteBtn{
+            margin: 20px 0;
+            padding: 7px 15px;
+            border: none;
+            color: #fff;
+            background-color: #ff6106;
+        }
+        .gobackBtn{
+            padding: 7px 15px;
+            background-color: transparent;
+            border: 1px solid #FFB606;
+         }
+    }
+   }
+}
