@@ -1,0 +1,43 @@
+#Header{
+    .container{
+        .header{
+            margin-top: 40px;
+            padding: 10px 35px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 65%;
+            z-index: 2;
+            box-shadow: 0 1px 7px rgba(0, 0, 0, 0.7);
+            .logo{
+                display: flex;
+            }
+
+            .navBar{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 20px;
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: #000;
+                }
+            }
+            .call{
+                display: flex;
+                align-items: center;
+                column-gap: 15px;
+                background-color: #FFB606;
+                color: #fff;
+                padding: 25px 40px;
+                .fa-solid{
+                    font-size: 25px;
+                }
+            }
+        }
+
+    }
+}

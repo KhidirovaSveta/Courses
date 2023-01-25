@@ -1,0 +1,55 @@
+#Cards{
+    margin-top: 80px;
+.coursesMainTxt{
+    text-align: center;
+    margin-bottom: 40px;
+}
+    .conatiner{
+        .functions{
+            display: flex;
+            column-gap: 15px;
+            align-items: center;
+            margin: 20px 30px;
+            .search{
+                padding: 4px 10px;
+                width: 30%;
+            }
+        }
+        .allCards{
+            display: flex;
+            flex-wrap: wrap;
+            .card{
+                width: 400px;
+                height: 450px;
+                text-align: center;
+                .cardsImg{
+                    width: 80%;
+                    margin-bottom: 15px;
+                    height: 60%;
+                }
+
+                .author{
+                    margin-top: 20px;
+                    background-color: #ebebeb;
+                    padding: 12px 7px;
+                    display: flex;
+                    align-items: center;
+                    column-gap: 15px;
+                    .subimg{
+                        width: 10%;
+                    }
+                    .authorName{
+                        column-gap: 99px;
+                        display: flex;
+                        align-items: center;
+                        .price{
+                            background-color: #FFB606;
+                            padding: 15px 19px;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

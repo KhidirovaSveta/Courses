@@ -1,0 +1,11 @@
+{
+    "_id": {
+      "$oid": "63d1119d593e968910dc620d"
+    },
+    "img1": "",
+    "title": "A complete guide to design",
+    "tags": "Adobe Guide, Layes, Smart Objects etc...",
+    "img2": "https://preview.colorlib.com/theme/course/images/author.jpg.webp",
+    "name": "Michael Smith",
+    "price": 22
+  }
